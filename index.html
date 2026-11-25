@@ -263,6 +263,7 @@ footer .btn{min-height:40px;font-size:13px}
     <div class="stats">
       <div class="stat" title="Công trình mới đã xây (trạm 7–12)"><svg viewBox="0 0 7 7" width="21" height="21" shape-rendering="crispEdges" aria-hidden="true"><path fill="#FDE417" d="M3 0h1v1h-1z M2 1h3v1h-3z M1 2h5v1h-5z M0 3h7v1h-7z"/><path fill="#FFF8E8" d="M1 4h5v3h-5z"/><path fill="#2B0B08" d="M3 5h1v2h-1z"/></svg><span class="px" id="nBuilt">0</span><span>/ 6 công trình mới</span></div>
       <div class="stat" title="Trạm ôn tập đã tô màu xong (trạm 1–6)"><svg viewBox="0 0 7 7" width="21" height="21" shape-rendering="crispEdges" aria-hidden="true"><path fill="#FFF2B3" d="M1 0h5v1h-5z M0 1h7v5h-7z M1 6h5v1h-5z"/><path fill="#D2372F" d="M2 2h1v1h-1z M3 3h1v1h-1z M4 2h1v1h-1z M2 4h3v1h-3z"/></svg><span class="px" id="nRev">0</span><span>/ 6 trạm đã ôn</span></div>
+      <button type="button" class="btn" id="langBtn" style="min-width:48px;min-height:44px;font-weight:800" aria-pressed="false">EN</button>
       <button type="button" class="me" id="meBtn" aria-haspopup="dialog">
         <span class="me-av" id="meAv"></span>
         <span class="who"><b id="meName">Nhà thám hiểm</b><span>Hồ sơ · đổi avatar</span></span>
@@ -302,6 +303,7 @@ footer .btn{min-height:40px;font-size:13px}
 </div>
 
 <div id="lcv" hidden role="dialog" aria-modal="true" aria-label="Bài học"><div class="lcv-bar"><button type="button" class="btn" id="lcvX">◀ Về trạm</button><b id="lcvT"></b></div><iframe id="lcvF" title="Bài học" allow="autoplay; camera; microphone; fullscreen"></iframe></div>
+<script src="lc/i18n-en.js"></script>
 <div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="mT"><div class="box modal-b" id="modalB"></div></div>
 
 <script>
@@ -1322,4 +1324,5 @@ render(); route();
 })();
 </script>
 
+<script src="lc/i18n.js"></script>
 </body></html>
