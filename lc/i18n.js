@@ -9,7 +9,7 @@ var KEY='ces_lang', VN=/[àáảãạăằắẳẵặâầấẩẫậèéẻ�
 var lang='vi', exact=Object.create(null), pats=[], built=false, starts=Object.create(null);
 var TOK=/[\p{L}\p{N}_]+|[^\s\p{L}\p{N}_]/gu;
 function toks(s){ var a=[], m; TOK.lastIndex=0; while((m=TOK.exec(s))) a.push({v:m[0],i:m.index,e:m.index+m[0].length}); return a; }
-function read(){ try{ return localStorage.getItem(KEY)==='en'?'en':'vi'; }catch(e){ return 'vi'; } }
+function read(){ try{ var m=/[?&]lang=(en|vi)\b/.exec(location.search); if(m&&window.top===window){ localStorage.setItem(KEY,m[1]); } }catch(e){} try{ return localStorage.getItem(KEY)==='en'?'en':'vi'; }catch(e){ return 'vi'; } }
 function esc(s){ return s.replace(/[.*+?^$()|[\]\\]/g,'\\$&'); }
 function build(){ if(built) return; built=true; var D=window.I18N_EN||{};
   Object.keys(D).forEach(function(k){ var v=D[k]; if(v==null||v==='SKIP') return;
